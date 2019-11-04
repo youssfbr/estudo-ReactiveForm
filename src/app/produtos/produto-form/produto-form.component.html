@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="card-header bg-primary text-light">
+    {{ title }}
+  </div>
+  <div class="card-body">
+    <form (ngSubmit)="onSubmit()" [formGroup]="formProduto">
+      <div class="form-group">
+        <label>Nome</label>
+        <input type="text" class="form-control" name="nome" id="nome" formControlName="nome" />
+      </div>
+
+      <div class="form-group">
+        <label>Descrição</label>
+        <textarea class="form-control" rows="3" name="descricao" id="descricao" formControlName="descricao" ></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Preço</label>
+        <input type="number" class="form-control" name="preco" id="preco" formControlName="preco" required />
+      </div>
+
+      <button type="submit" class="btn btn-primary">Salvar</button>
+      <a routerLink="/produtos" class="btn btn-secondary ml-2">Cancelar</a>
+    </form>
+  </div>
+</div>
