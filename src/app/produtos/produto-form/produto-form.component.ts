@@ -8,7 +8,7 @@ import { FormGroup, FormBuilder } from '@angular/forms';
   styleUrls: ['./produto-form.component.css']
 })
 export class ProdutoFormComponent implements OnInit {
-  // produto: Produto;
+
   title: string;
   formProduto: FormGroup;
 
@@ -31,6 +31,7 @@ export class ProdutoFormComponent implements OnInit {
   onSubmit() {
     console.log(this.formProduto.value);
 
-    this.createForm(new Produto());
+   // this.createForm(new Produto());
+    this.formProduto.reset(new Produto());
   }
 }
